@@ -5,7 +5,7 @@ class AppHeader extends HTMLElement {
     // Determine base path depending on where the HTML file is
     const isHtmlFolder = window.location.pathname.includes('/html/');
     const basePath = isHtmlFolder ? '../' : './';
-    const htmlPath = isHtmlFolder ? '' : 'html/';
+    const cartLink = isHtmlFolder ? 'cart.html' : 'html/cart.html';
 
     this.innerHTML = `
       <!-- TOP PROMO -->
@@ -32,7 +32,7 @@ class AppHeader extends HTMLElement {
           </div>
           <div class="header-icons">
             <a href="#" class="mobile-search"><img src="${basePath}Images/searrrch.svg" alt="Search"></a>
-            <a href="${basePath}${htmlPath}cart.html">
+            <a href="${cartLink}">
               <img src="${basePath}Images/carticon.svg" alt="Cart">
               <span id="cart-badge" class="cart-badge">0</span>
             </a>
