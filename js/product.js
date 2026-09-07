@@ -45,35 +45,19 @@ function loadDynamicProduct() {
       const product = JSON.parse(currentProductStr);
       
       // Update Title
-      const titleEl = document.querySelector('.product-title');
+      const titleEl = document.querySelector('.product-info h1');
       if (titleEl && product.title) titleEl.textContent = product.title;
       
-      // Update Price
-      const priceEl = document.querySelector('.product-price');
-      if (priceEl && product.price) {
-        // Find existing discount badge if any
-        const badge = priceEl.querySelector('.discount-badge');
-        priceEl.innerHTML = `${product.price} `;
-        if (badge) priceEl.appendChild(badge);
+      // Update Price (wipe old discount badges, just show the actual price)
+      const priceEl = document.querySelector('.product-price-large');
+      if (priceEl && product.price) priceEl.textContent = product.price;
+      
+      // Update Rating HTML
+      const ratingEl = document.querySelector('.product-info .product-rating');
+      if (ratingEl && product.ratingHTML) {
+        ratingEl.innerHTML = product.ratingHTML;
       }
       
-      // Update Rating
-      const ratingScoreEl = document.querySelector('.rating-score');
-      if (ratingScoreEl && product.rating) ratingScoreEl.textContent = product.rating;
-
-      // Update Main Image
-      const mainImg = document.getElementById('mainImage');
-      if (mainImg && product.image) {
-        // The image path must be relative to product.html (inside html/ folder)
-        // so it should always point to ../Images/
-        let imgPath = product.image;
-        const imagesIndex = imgPath.indexOf('Images/');
-        if (imagesIndex !== -1) {
-          imgPath = '../' + imgPath.substring(imagesIndex);
-        }
-        mainImg.src = imgPath;
-      }
-
       // Update the breadcrumb
       const breadcrumbSpan = document.querySelector('.breadcrumbs span');
       if (breadcrumbSpan && product.title) {

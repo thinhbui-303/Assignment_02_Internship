@@ -1,4 +1,4 @@
-﻿// --- GLOBAL CART STATE & BADGE ---
+// --- GLOBAL CART STATE & BADGE ---
 function getCart() {
   const cart = localStorage.getItem('shopco_cart');
   return cart ? JSON.parse(cart) : [];
@@ -37,14 +37,12 @@ function setupProductClickTracking() {
       // Extract data from the card
       const titleEl = this.querySelector('.product-title');
       const priceEl = this.querySelector('.product-price');
-      const imgEl = this.querySelector('.product-img-wrapper img');
-      const ratingEl = this.querySelector('.rating-score');
+      const ratingEl = this.querySelector('.product-rating');
 
       const productData = {
         title: titleEl ? titleEl.textContent.trim() : 'Unknown Product',
-        price: priceEl ? priceEl.textContent.trim().split(' ')[0] : '$0', // e.g. "$120"
-        image: imgEl ? imgEl.getAttribute('src') : '',
-        rating: ratingEl ? ratingEl.textContent.trim() : '5.0/5'
+        price: priceEl ? (priceEl.firstChild.nodeType === 3 ? priceEl.firstChild.textContent.trim() : priceEl.textContent.trim().split(' ')[0]) : '$0',
+        ratingHTML: ratingEl ? ratingEl.innerHTML : ''
       };
 
       // Save to localStorage
