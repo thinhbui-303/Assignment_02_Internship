@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Life Graphic T-Shirt - SHOP.CO</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/index.css"> <!-- For product grid at the bottom -->
+</head>
+<body>
+
+  <app-header></app-header>
+
+  <div class="container">
+    <!-- BREADCRUMBS -->
+    <div class="breadcrumbs" style="margin-bottom: 25px; margin-top: 10px;">
+      <a href="../index.html">Home</a> &gt; <a href="category.html">Shop</a> &gt; <a href="#">Men</a> &gt; <span style="color: black; font-weight: 500;">T-shirts</span>
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <div class="product-container">
+      <!-- GALLERY -->
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="../Images/1lifegraphic.png" alt="One Life Graphic T-Shirt" id="mainImage">
+        </div>
+        <div class="thumbnail-list">
+          <div class="thumbnail active" onclick="changeImage('../Images/1lifegraphic.png', this)">
+            <img src="../Images/1lifegraphic.png" alt="Thumbnail 1">
+          </div>
+          <div class="thumbnail" onclick="changeImage('../Images/thumbnail1life.png', this)">
+            <img src="../Images/thumbnail1life.png" alt="Thumbnail 2">
+          </div>
+          <div class="thumbnail" onclick="changeImage('../Images/option2thumbnail1life.png', this)">
+            <img src="../Images/option2thumbnail1life.png" alt="Thumbnail 3">
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="product-info">
+        <h1>ONE LIFE GRAPHIC T-SHIRT</h1>
+        <div class="product-rating">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span style="color:var(--gray-text)">4.5/5</span>
+        </div>
+        <div class="product-price-large">
+          $260 <span class="old-price">$300</span> <span class="discount-badge">-40%</span>
+        </div>
+        <p class="product-desc">
+          This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
+        </p>
+
+        <!-- COLORS -->
+        <div class="options-title">Select Colors</div>
+        <div class="colors-options">
+          <div class="color-circle" style="background-color: #4F4631;">&#10003;</div>
+          <div class="color-circle" style="background-color: #314F4A;"></div>
+          <div class="color-circle" style="background-color: #31344F;"></div>
+        </div>
+
+        <!-- SIZES -->
+        <div class="options-title">Choose Size</div>
+        <div class="size-options">
+          <div class="size-pill">Small</div>
+          <div class="size-pill">Medium</div>
+          <div class="size-pill active">Large</div>
+          <div class="size-pill">X-Large</div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="action-row">
+          <div class="quantity-selector">
+            <button onclick="updateQty(-1)">-</button>
+            <span id="qty">1</span>
+            <button onclick="updateQty(1)">+</button>
+          </div>
+          <button class="btn-add-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="product-tabs">
+      <div class="tab" data-target="details">Product Details</div>
+      <div class="tab active" data-target="reviews">Rating & Reviews</div>
+      <div class="tab" data-target="faqs">FAQs</div>
+    </div>
+
+    <!-- TAB CONTENTS -->
+    <div id="tab-details" class="tab-content" style="display: none;">
+      <p style="text-align: center; color: var(--gray-text); padding: 40px; font-size: 16px;">Product details are not available yet.</p>
+    </div>
+
+    <div id="tab-faqs" class="tab-content" style="display: none;">
+      <p style="text-align: center; color: var(--gray-text); padding: 40px; font-size: 16px;">No FAQs available for this product.</p>
+    </div>
+
+    <div id="tab-reviews" class="tab-content active">
+      <!-- REVIEWS -->
+      <div class="reviews-header">
+        <h2>All Reviews <span>(451)</span></h2>
+        <div class="reviews-actions">
+          <button class="btn-filter"><i class="fa-solid fa-sliders"></i></button>
+          <button class="btn-write">Write a Review</button>
+        </div>
+      </div>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="reviewer-name">Samantha D. <span class="verified-icon">&#10003;</span></div>
+        <p class="review-text">"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."</p>
+        <div class="review-date">Posted on August 14, 2023</div>
+      </div>
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="reviewer-name">Alex M. <span class="verified-icon">&#10003;</span></div>
+        <p class="review-text">"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."</p>
+        <div class="review-date">Posted on August 15, 2023</div>
+      </div>
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="reviewer-name">Ethan R. <span class="verified-icon">&#10003;</span></div>
+        <p class="review-text">"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."</p>
+        <div class="review-date">Posted on August 16, 2023</div>
+      </div>
+      <!-- Review 4 -->
+      <div class="review-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="reviewer-name">Olivia P. <span class="verified-icon">&#10003;</span></div>
+        <p class="review-text">"As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this piece stand out."</p>
+        <div class="review-date">Posted on August 17, 2023</div>
+      </div>
+      <!-- Review 5 -->
+      <div class="review-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="reviewer-name">Liam K. <span class="verified-icon">&#10003;</span></div>
+        <p class="review-text">"This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."</p>
+        <div class="review-date">Posted on August 18, 2023</div>
+      </div>
+      <!-- Review 6 -->
+      <div class="review-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+        <div class="reviewer-name">Ava H. <span class="verified-icon">&#10003;</span></div>
+        <p class="review-text">"I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."</p>
+        <div class="review-date">Posted on August 19, 2023</div>
+      </div>
+      </div>
+      <button class="btn-outline load-more">Load More Reviews</button>
+    </div>
+
+    <!-- YOU MIGHT ALSO LIKE -->
+    <h2 class="section-title">YOU MIGHT ALSO LIKE</h2>
+    <div class="products-grid">
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../Images/polowithcontrast.png" alt="Polo with Contrast Trims">
+        </div>
+        <h3 class="product-title">Polo with Contrast Trims</h3>
+        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span> 4.0/5</span></div>
+        <div class="product-price">
+          $212 <span class="old-price">$242</span> <span class="discount-badge">-20%</span>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../Images/gradientgraphictshirt.png" alt="Gradient Graphic T-shirt">
+        </div>
+        <h3 class="product-title">Gradient Graphic T-shirt</h3>
+        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span> 3.5/5</span></div>
+        <div class="product-price">$145</div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../Images/polowithtiping.png" alt="Polo with Tipping Details">
+        </div>
+        <h3 class="product-title">Polo with Tipping Details</h3>
+        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span> 4.5/5</span></div>
+        <div class="product-price">$180</div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../Images/blackstriped.png" alt="Black Striped T-shirt">
+        </div>
+        <h3 class="product-title">Black Striped T-shirt</h3>
+        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span> 5.0/5</span></div>
+        <div class="product-price">
+          $120 <span class="old-price">$150</span> <span class="discount-badge">-30%</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+
+  <script src="../js/components.js"></script>
+  <script src="../js/global.js"></script>
+  <script src="../js/product.js"></script>
+</body>
+</html>

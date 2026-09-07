@@ -1,0 +1,327 @@
+/* HERO SECTION */
+.hero {
+  background-color: #F2F0F1;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-desc {
+  color: var(--gray-text);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-item h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.stat-item p {
+  color: var(--gray-text);
+  font-size: 14px;
+}
+
+.stat-divider {
+  width: 1px;
+  background-color: #dcdcdc;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: max-content;
+}
+
+.image-wrapper img.main-banner {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.hero-star {
+  position: absolute;
+  z-index: 2;
+}
+
+.star-small {
+  top: 45%;
+  right: 42%;
+  width: 3.5%;
+}
+
+.star-large {
+  top: 10%;
+  right: 8%;
+  width: 5.5%;
+}
+
+/* BRANDS BANNER */
+.brands-banner {
+  background-color: var(--primary-color);
+  padding: 30px 0;
+}
+
+.brands-banner .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.brand-versace { font-family: 'Georgia', 'Times New Roman', serif; font-size: 34px; font-weight: normal; letter-spacing: 1px; color: white; }
+.brand-zara { font-family: 'Didot', 'Bodoni MT', 'Times New Roman', serif; font-size: 44px; font-weight: normal; letter-spacing: -2.5px; color: white; }
+.brand-gucci { font-family: 'Georgia', 'Times New Roman', serif; font-size: 36px; font-weight: normal; letter-spacing: 2px; color: white; }
+.brand-prada { font-family: 'Didot', 'Bodoni MT', 'Times New Roman', serif; font-size: 40px; font-weight: bold; letter-spacing: 3px; color: white; }
+.brand-calvin { font-family: 'Futura', 'Century Gothic', 'Arial', sans-serif; font-size: 32px; font-weight: normal; color: white; }
+
+.brands-banner img {
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+/* PRODUCT SECTIONS */
+.section-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 60px 0 40px 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.view-all-btn {
+  display: block;
+  width: 200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 40px 0;
+}
+
+/* BROWSE BY DRESS STYLE */
+.dress-style {
+  background-color: #F0F0F0;
+  border-radius: 40px;
+  padding: 60px;
+  margin-top: 60px;
+}
+
+.dress-style-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 289px;
+  gap: 20px;
+}
+
+.dress-style-grid > .style-card:nth-child(1) { grid-column: span 4; }
+.dress-style-grid > .style-card:nth-child(2) { grid-column: span 8; }
+.dress-style-grid > .style-card:nth-child(3) { grid-column: span 8; }
+.dress-style-grid > .style-card:nth-child(4) {
+  grid-column: span 4;
+}
+
+/* TESTIMONIALS */
+.testimonials-section {
+  margin: 80px auto;
+  position: relative;
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.testimonials-header .section-title {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.testimonials-arrows {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: transform 0.2s;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.1);
+}
+
+.testimonials-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonials-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  flex: 0 0 calc(33.333% - 14px);
+  min-width: 350px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.testimonial-card .stars {
+  color: #FFC633;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.customer-name {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.customer-review {
+  color: var(--gray-text);
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+}
+
+.style-card img {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.style-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.style-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center; /* Giúp ảnh không bị mất đầu */
+  transform: scale(0.9); /* Thu nhỏ lại một chút để không bị phóng to sát viền */
+}
+
+.style-card h3 {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 32px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 48px; }
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .dress-style-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .dress-style-grid > .style-card { grid-column: span 12 !important; height: 200px; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding-top: 40px; padding-bottom: 0; }
+  .hero .container { flex-direction: column; text-align: center; }
+  .hero-content { margin-bottom: 40px; }
+  .hero-stats { justify-content: center; flex-wrap: wrap; }
+  .hero-image { position: relative; height: 400px; margin-top: 20px; overflow: hidden; width: 100%; }
+  .brands-banner .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+  }
+  .brand-versace { grid-column: 1 / 3; font-size: 22px; }
+  .brand-zara { grid-column: 3 / 5; font-size: 30px; }
+  .brand-gucci { grid-column: 5 / 7; font-size: 24px; }
+  .brand-prada { grid-column: 2 / 4; font-size: 28px; letter-spacing: 2px; }
+  .brand-calvin { grid-column: 4 / 6; font-size: 22px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .section-title { font-size: 36px; }
+  .testimonials-header { align-items: center; }
+  .testimonials-header .section-title { font-size: 32px; }
+  .testimonial-card { min-width: 300px; padding: 25px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 36px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
