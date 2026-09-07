@@ -38,11 +38,13 @@ function setupProductClickTracking() {
       const titleEl = this.querySelector('.product-title');
       const priceEl = this.querySelector('.product-price');
       const ratingEl = this.querySelector('.product-rating');
+      const imgEl = this.querySelector('.product-img-wrapper img');
 
       const productData = {
         title: titleEl ? titleEl.textContent.trim() : 'Unknown Product',
         price: priceEl ? (priceEl.firstChild.nodeType === 3 ? priceEl.firstChild.textContent.trim() : priceEl.textContent.trim().split(' ')[0]) : '$0',
-        ratingHTML: ratingEl ? ratingEl.innerHTML : ''
+        ratingHTML: ratingEl ? ratingEl.innerHTML : '',
+        image: imgEl ? imgEl.getAttribute('src') : ''
       };
 
       // Save to localStorage

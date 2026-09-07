@@ -58,6 +58,17 @@ function loadDynamicProduct() {
         ratingEl.innerHTML = product.ratingHTML;
       }
       
+      // Update Main Image
+      const mainImg = document.getElementById('mainImage');
+      if (mainImg && product.image) {
+        let imgPath = product.image;
+        const imagesIndex = imgPath.indexOf('Images/');
+        if (imagesIndex !== -1) {
+          imgPath = '../' + imgPath.substring(imagesIndex);
+        }
+        mainImg.src = imgPath;
+      }
+      
       // Update the breadcrumb
       const breadcrumbSpan = document.querySelector('.breadcrumbs span');
       if (breadcrumbSpan && product.title) {
