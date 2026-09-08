@@ -21,10 +21,17 @@ class AppHeader extends HTMLElement {
             <a href="${basePath}index.html" style="text-decoration: none; color: inherit;">SHOP.CO</a>
           </div>
           <nav class="nav-links">
-            <a href="#">Shop</a>
-            <a href="#">On Sale</a>
-            <a href="#">New Arrivals</a>
-            <a href="#">Brands</a>
+            <div class="dropdown">
+              <a href="${basePath}html/category.html">Shop <i class="fa-solid fa-chevron-down" style="font-size:12px;"></i></a>
+              <div class="dropdown-content">
+                <a href="${basePath}html/category.html">Category</a>
+                <a href="${basePath}html/product.html">Product Detail</a>
+                <a href="${cartLink}">Cart</a>
+              </div>
+            </div>
+            <a href="${basePath}index.html#on-sale">On Sale</a>
+            <a href="${basePath}index.html#new-arrivals">New Arrivals</a>
+            <a href="${basePath}index.html#brands">Brands</a>
           </nav>
           <div class="search-bar">
             <img src="${basePath}Images/searrrch.svg" alt="Search">

@@ -1,4 +1,4 @@
-﻿// --- CATEGORY PAGE SPECIFIC LOGIC ---
+// --- CATEGORY PAGE SPECIFIC LOGIC ---
 document.addEventListener('DOMContentLoaded', () => {
   // --- Mobile Filter Toggle ---
   const filterBtn = document.querySelector('.mobile-filter-btn');
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPage = 1;
 
   function renderPagination() {
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 1024;
     const itemsPerPage = isMobile ? 8 : 9;
 
     productCards.forEach((card, index) => {

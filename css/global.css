@@ -82,10 +82,49 @@ ul {
 .nav-links a {
   font-weight: 500;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .nav-links a:hover {
   color: var(--gray-text);
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 100;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content a {
+  padding: 10px 20px;
+  color: var(--primary-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--gray-light);
+  color: var(--primary-color);
 }
 
 .search-bar {
