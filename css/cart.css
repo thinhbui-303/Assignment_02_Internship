@@ -239,20 +239,15 @@
 }
 
 @media (max-width: 480px) {
-  .item-img {
-    width: 90px;
-    height: 90px;
-  }
-  .item-title-row h3 {
-    font-size: 16px;
-  }
-  .item-price {
-    font-size: 18px;
-  }
-  .item-qty {
-    width: 90px;
-    padding: 5px 10px;
-  }
+  .cart-items-wrapper { padding: 10px; }
+  .order-summary { padding: 15px; }
+  .item-img { width: 70px; height: 70px; }
+  .item-title-row h3 { font-size: 14px; }
+  .item-price { font-size: 16px; }
+  .item-qty { width: 80px; padding: 5px; font-size: 14px; }
+  .item-qty button { font-size: 14px; }
+  .btn-delete { font-size: 16px; }
+  .cart-item { gap: 10px; }
   .promo-code {
     flex-direction: column;
   }

@@ -320,6 +320,8 @@
 .load-more {
   display: block;
   width: 250px;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 0 auto 80px auto;
   text-align: center;
 }
@@ -397,6 +399,6 @@
     gap: 15px;
   }
   .product-info h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 }

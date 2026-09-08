@@ -402,6 +402,8 @@ ul {
 .payment-methods {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .payment-methods img {
@@ -451,8 +453,7 @@ ul {
     top: 15px;
     left: 15px;
     right: 15px;
-    width: auto;
-    max-width: none;
+    width: calc(100% - 30px);
     box-sizing: border-box;
     z-index: 999;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -501,5 +502,24 @@ ul {
   .discount-badge {
     font-size: 10px;
     padding: 3px 8px;
+  }
+  .newsletter-title {
+    font-size: 22px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .newsletter-box {
+    padding: 20px 15px;
+  }
+  .logo { 
+    font-size: 24px; 
+    word-wrap: break-word;
+  }
+  .header-icons { 
+    gap: 8px; 
+  }
+  .main-header .container { 
+    gap: 10px; 
+    flex-wrap: wrap; 
   }
 }
