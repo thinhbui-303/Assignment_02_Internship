@@ -43,11 +43,15 @@
 .stat-item h3 {
   font-size: 40px;
   font-weight: 700;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .stat-item p {
   color: var(--gray-text);
   font-size: 14px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .stat-divider {
@@ -266,6 +270,7 @@
   border-radius: 20px;
   overflow: hidden;
   background-color: #fff;
+  min-width: 0;
 }
 
 .style-card img {
