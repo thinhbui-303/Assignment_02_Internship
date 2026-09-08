@@ -203,6 +203,18 @@
   padding-bottom: 10px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.testimonial-card {
+  scroll-snap-align: start;
+}
+
+.arrow-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+  transform: none;
 }
 
 .testimonials-slider::-webkit-scrollbar {
@@ -293,17 +305,29 @@
   .stat-divider { display: none; }
   .hero-image {
     position: relative;
-    height: auto;
     width: 100%;
+    height: 0;
+    padding-bottom: 90%;
+    /* fixed aspect ratio box so the image never gets squashed or loses its
+       proportions no matter how narrow the screen gets. The box needs to be
+       tall enough (>=85% of its width) for the models to be centerable at
+       all — a shallower box can't crop out the empty left side symmetrically */
   }
   .image-wrapper {
-    position: relative;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .image-wrapper img.main-banner {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    /* the source image has a lot of empty background on the left; this
+       anchor was measured so the models land dead-center in the box */
+    object-position: 96% center;
+    display: block;
+    margin: 0 auto;
   }
   .brands-banner .container {
     display: flex;
@@ -320,7 +344,7 @@
   .section-title { font-size: 32px; }
   .testimonials-header { align-items: center; }
   .testimonials-header .section-title { font-size: 28px; }
-  .testimonial-card { flex: 0 0 calc(50% - 10px); min-width: 280px; padding: 25px; }
+  .testimonial-card { flex: 0 0 100%; width: 100%; min-width: 0; padding: 25px; }
   .dress-style {
     padding: 30px 15px;
     border-radius: 20px;
@@ -336,6 +360,8 @@
   .hero-title { font-size: 32px; }
   .hero-desc { font-size: 14px; }
   .hero-stats { gap: 10px; }
+  .hero-image { padding-bottom: 105%; }
+  .image-wrapper img.main-banner { object-position: 90% center; }
   .stat-item h3 { font-size: 24px; }
   .stat-item p { font-size: 12px; }
   .btn-primary { padding: 12px 24px; font-size: 14px; }
@@ -355,7 +381,7 @@
   .testimonials-section { margin: 40px auto; }
   .testimonials-header { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
   .testimonials-header .section-title { font-size: 22px; }
-  .testimonial-card { flex: 0 0 85vw; min-width: 0; padding: 20px; }
+  .testimonial-card { flex: 0 0 100%; width: 100%; min-width: 0; padding: 20px; }
   .customer-name { font-size: 16px; }
   .customer-review { font-size: 14px; }
   .view-all-btn { margin: 20px auto; }
