@@ -46,6 +46,8 @@ ul {
   text-align: center;
   padding: 10px;
   font-size: 14px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .top-promo a {
@@ -72,6 +74,7 @@ ul {
   font-size: 32px;
   font-weight: 900;
   letter-spacing: -1px;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -151,6 +154,7 @@ ul {
   display: flex;
   gap: 15px;
   font-size: 24px;
+  flex-shrink: 0;
 }
 
 .header-icons a {
@@ -184,6 +188,7 @@ ul {
   display: none;
   font-size: 24px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* BUTTONS */
@@ -199,6 +204,8 @@ ul {
   transition: opacity 0.2s;
   display: inline-block;
   text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-primary:hover {
@@ -214,6 +221,8 @@ ul {
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-outline:hover {
@@ -248,6 +257,8 @@ ul {
   font-weight: 700;
   font-size: 18px;
   margin-top: 5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .product-rating {
@@ -310,6 +321,8 @@ ul {
   font-weight: 900;
   line-height: 1.1;
   max-width: 500px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .newsletter-form {
@@ -326,12 +339,16 @@ ul {
   border: none;
   font-family: inherit;
   font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .newsletter-form button {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-weight: 700;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .main-footer {
@@ -349,11 +366,14 @@ ul {
 .footer-brand p {
   color: var(--gray-text);
   margin: 15px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .social-icons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -378,6 +398,8 @@ ul {
   margin-bottom: 20px;
   font-weight: 500;
   letter-spacing: 2px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-col ul {
@@ -397,6 +419,8 @@ ul {
   justify-content: space-between;
   align-items: center;
   color: var(--gray-text);
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .payment-methods {
@@ -490,8 +514,48 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .top-promo { font-size: 12px; padding: 8px 10px; }
+  .main-header .container {
+    gap: 10px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .header-icons {
+    gap: 10px;
+    font-size: 20px;
+  }
+  .header-icons img {
+    height: 20px;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+  .footer-col h4 {
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  .main-footer {
+    padding-top: 100px;
+  }
+  .newsletter-section {
+    margin-top: 40px;
+    margin-bottom: -60px;
+  }
+  .newsletter-box {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+  .newsletter-title {
+    font-size: 20px;
+  }
+  .newsletter-form input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  .newsletter-form button {
+    padding: 12px 15px;
+    font-size: 14px;
   }
   .product-title {
     font-size: 14px;
@@ -503,23 +567,7 @@ ul {
     font-size: 10px;
     padding: 3px 8px;
   }
-  .newsletter-title {
-    font-size: 22px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  .newsletter-box {
-    padding: 20px 15px;
-  }
-  .logo { 
-    font-size: 24px; 
-    word-wrap: break-word;
-  }
-  .header-icons { 
-    gap: 8px; 
-  }
-  .main-header .container { 
-    gap: 10px; 
-    flex-wrap: wrap; 
+  .payment-methods img {
+    height: 20px;
   }
 }

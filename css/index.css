@@ -43,15 +43,11 @@
 .stat-item h3 {
   font-size: 40px;
   font-weight: 700;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .stat-item p {
   color: var(--gray-text);
   font-size: 14px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .stat-divider {
@@ -80,27 +76,7 @@
 .image-wrapper img.main-banner {
   height: 100%;
   width: auto;
-  max-width: 100vw;
   display: block;
-  object-fit: contain;
-  object-position: bottom;
-}
-
-.hero-star {
-  position: absolute;
-  z-index: 2;
-}
-
-.star-small {
-  top: 45%;
-  right: 42%;
-  width: 3.5%;
-}
-
-.star-large {
-  top: 10%;
-  right: 8%;
-  width: 5.5%;
 }
 
 /* BRANDS BANNER */
@@ -135,6 +111,8 @@
   font-weight: 900;
   text-transform: uppercase;
   margin: 60px 0 40px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .products-grid {
@@ -202,6 +180,7 @@
   display: flex;
   gap: 15px;
   margin-bottom: 5px;
+  flex-shrink: 0;
 }
 
 .arrow-btn {
@@ -310,8 +289,22 @@
   .hero { padding-top: 40px; padding-bottom: 0; }
   .hero .container { flex-direction: column; text-align: center; }
   .hero-content { margin-bottom: 40px; }
-  .hero-stats { justify-content: center; flex-wrap: wrap; }
-  .hero-image { position: relative; height: 400px; margin-top: 20px; overflow: hidden; width: 100%; }
+  .hero-stats { justify-content: center; flex-wrap: wrap; gap: 15px; }
+  .stat-divider { display: none; }
+  .hero-image {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .image-wrapper img.main-banner {
+    width: 100%;
+    height: auto;
+  }
   .brands-banner .container {
     display: flex;
     flex-wrap: wrap;
@@ -319,26 +312,52 @@
     gap: 15px 25px;
   }
   .brand-versace, .brand-zara, .brand-gucci, .brand-prada, .brand-calvin {
-    grid-column: auto;
     font-size: 20px;
   }
   .brand-zara { font-size: 26px; }
-  .brand-prada { font-size: 24px; }
+  .brand-prada { font-size: 24px; letter-spacing: 2px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .section-title { font-size: 36px; }
+  .section-title { font-size: 32px; }
   .testimonials-header { align-items: center; }
-  .testimonials-header .section-title { font-size: 32px; }
-  .testimonial-card { flex: 0 0 calc(50% - 10px); min-width: 300px; padding: 25px; }
+  .testimonials-header .section-title { font-size: 28px; }
+  .testimonial-card { flex: 0 0 calc(50% - 10px); min-width: 280px; padding: 25px; }
   .dress-style {
     padding: 30px 15px;
+    border-radius: 20px;
+  }
+  .style-card h3 {
+    font-size: 24px;
+    top: 15px;
+    left: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 36px; word-wrap: break-word; }
+  .hero-title { font-size: 32px; }
+  .hero-desc { font-size: 14px; }
+  .hero-stats { gap: 10px; }
+  .stat-item h3 { font-size: 24px; }
+  .stat-item p { font-size: 12px; }
+  .btn-primary { padding: 12px 24px; font-size: 14px; }
+  .brands-banner .container { gap: 10px 20px; }
+  .brand-versace, .brand-zara, .brand-gucci, .brand-prada, .brand-calvin {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  .brand-zara { font-size: 20px; letter-spacing: -1px; }
+  .brand-prada { font-size: 18px; letter-spacing: 1px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .section-title { font-size: 28px; word-wrap: break-word; overflow-wrap: break-word; }
-  .testimonials-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .testimonials-header .section-title { font-size: 22px; word-wrap: break-word; overflow-wrap: break-word; }
-  .testimonial-card { flex: 0 0 100%; min-width: 100%; }
+  .section-title { font-size: 24px; margin: 40px 0 20px 0; }
+  .dress-style { padding: 20px 10px; margin-top: 40px; border-radius: 15px; }
+  .dress-style-grid { gap: 10px; }
+  .dress-style-grid > .style-card { height: 150px; }
+  .style-card h3 { font-size: 18px; top: 10px; left: 10px; }
+  .testimonials-section { margin: 40px auto; }
+  .testimonials-header { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
+  .testimonials-header .section-title { font-size: 22px; }
+  .testimonial-card { flex: 0 0 85vw; min-width: 0; padding: 20px; }
+  .customer-name { font-size: 16px; }
+  .customer-review { font-size: 14px; }
+  .view-all-btn { margin: 20px auto; }
+  .divider { margin: 20px 0; }
 }

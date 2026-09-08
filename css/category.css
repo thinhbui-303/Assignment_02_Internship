@@ -3,6 +3,8 @@
   padding: 20px 0;
   color: var(--gray-text);
   font-size: 14px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .breadcrumbs a {
@@ -178,6 +180,7 @@
 /* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
+  min-width: 0;
 }
 
 .main-header-top {
@@ -185,6 +188,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .title-and-count {
@@ -198,6 +203,8 @@
   font-size: 32px;
   font-weight: 700;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .product-count {
@@ -339,10 +346,15 @@
     background-color: var(--gray-light);
     border-radius: 50%;
     cursor: pointer;
+    flex-shrink: 0;
+  }
+  .title-and-count h1 {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
+  .category-container { margin-bottom: 30px; }
   .category-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -356,6 +368,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
+  }
+  .title-and-count h1 {
+    font-size: 20px;
   }
   .pagination {
     justify-content: center;
