@@ -132,9 +132,13 @@ function setupAddToCart() {
   const addToCartBtn = document.querySelector('.btn-add-cart');
   if (addToCartBtn) {
     addToCartBtn.addEventListener('click', () => {
-      // Collect product info
-      const title = document.querySelector('.product-title').textContent.trim();
-      const priceText = document.querySelector('.product-price').childNodes[0].textContent.trim();
+      // Collect product info (from the MAIN product block, not the
+      // "You might also like" cards further down the page — those also use
+      // .product-title / .product-price and were being matched first by
+      // querySelector, which caused every product page to add the same
+      // wrong item to the cart)
+      const title = document.querySelector('.product-info h1').textContent.trim();
+      const priceText = document.querySelector('.product-price-large').childNodes[0].textContent.trim();
       const price = parseFloat(priceText.replace('$', ''));
       const image = document.getElementById('mainImage').src;
       
